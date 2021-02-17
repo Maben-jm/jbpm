@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="helloworld" xmlns="http://jbpm.org/4.4/jpdl">
+    <start name="start1" g="252,12,48,48">
+        <transition name="to 提交申请" to="提交申请" g="-71,-17"/>
+    </start>
+    <end name="end1" g="252,403,48,48"/>
+    <task name="提交申请" g="205,92,142,72" assignee="员工">
+        <transition name="to 审批【部门经理】" to="审批【部门经理】" g="-119,-17"/>
+    </task>
+    <task name="审批【部门经理】" g="203,196,147,74" assignee="部门经理">
+        <transition name="to 审批【总经理】" to="审批【总经理】" g="-107,-17"/>
+    </task>
+    <task name="审批【总经理】" g="205,302,143,69" assignee="总经理">
+        <transition name="to end1" to="end1" g="-47,-17"/>
+    </task>
+</process>
