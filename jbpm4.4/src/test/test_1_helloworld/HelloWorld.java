@@ -1,4 +1,4 @@
-package test;
+package test.test_1_helloworld;
 
 import org.jbpm.api.Configuration;
 import org.jbpm.api.ProcessEngine;
