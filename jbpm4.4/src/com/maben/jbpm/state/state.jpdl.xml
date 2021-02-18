@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="state" xmlns="http://jbpm.org/4.4/jpdl">
+   <start name="start1" g="209,44,48,48">
+      <transition name="to 发送通知" to="发送通知" g="-71,-17"/>
+   </start>
+   <end name="end1" g="203,301,48,48"/>
+   <state name="发送通知" g="163,171,133,68">
+      <transition name="to end1" to="end1" g="-47,-17"/>
+   </state>
+</process>

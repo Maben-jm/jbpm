@@ -10,6 +10,9 @@ import java.util.List;
 
 public class HelloWorld {
 
+    /**
+     * 自动创建JBPM的18张表
+     */
     @Test
     public void createTable(){
         new org.hibernate.cfg.Configuration().configure("jbpm.hibernate.cfg.xml").buildSessionFactory();
@@ -23,7 +26,7 @@ public class HelloWorld {
     public void deployProcessDefinition(){
         String DeploymentID = processEngine.getRepositoryService()//与部署对象和流程定义相关的Serivce
                 .createDeployment()//创建一个部署对象
-                .addResourceFromClasspath("com/maben/jbpm/helloworld/helloworld.xml")//从类路径下加载资源（一次只能加载一个文件）
+                .addResourceFromClasspath("com/maben/jbpm/helloworld/helloworld.jpdl.xml")//从类路径下加载资源（一次只能加载一个文件）
                 .addResourceFromClasspath("com/maben/jbpm/helloworld/helloworld.png")//从类路径下加载资源（一次只能加载一个文件）
                 .deploy();//部署流程定义
         System.out.println("部署对象ID："+DeploymentID);

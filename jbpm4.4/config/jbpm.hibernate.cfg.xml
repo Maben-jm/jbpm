@@ -24,6 +24,8 @@
         <mapping resource="jbpm.history.hbm.xml"/>
         <mapping resource="jbpm.task.hbm.xml"/>
         <mapping resource="jbpm.identity.hbm.xml"/>
+        <!--添加流程变量实例-->
+        <mapping resource="com/maben/jbpm/pojo/Person.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>

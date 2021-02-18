@@ -15,7 +15,10 @@ import org.jbpm.api.ProcessDefinitionQuery;
 import org.jbpm.api.ProcessEngine;
 import org.junit.Test;
 
-public class ProcessDefinitionTest {
+/**
+ * 流程定义测试001
+ */
+public class Test_1ProcessDefinition {
 
 	/**创建流程引擎的三种方式*/
 	public void createProcessEngine(){
