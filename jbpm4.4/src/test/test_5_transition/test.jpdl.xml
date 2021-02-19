@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="test" xmlns="http://jbpm.org/4.4/jpdl">
+    <start name="start1" g="187,16,48,48">
+        <transition name="to 审批【部门经理】" to="审批【部门经理】" g="-119,-17"/>
+    </start>
+    <end name="end1" g="187,296,48,48"/>
+    <task name="审批【部门经理】" g="131,96,161,65" assignee="李四">
+        <transition name="to end1" to="end1" g="-47,-17"/>
+        <transition name="to 审批【总经理】" to="审批【总经理】" g="-107,-17"/>
+    </task>
+    <task name="审批【总经理】" g="282,194,169,71" assignee="总经理">
+        <transition name="to end1" to="end1" g="-47,-17"/>
+    </task>
+</process>
