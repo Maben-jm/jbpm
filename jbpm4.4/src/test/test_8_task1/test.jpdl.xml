@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="test" xmlns="http://jbpm.org/4.4/jpdl">
+    <start name="start1" g="213,51,48,48">
+        <transition name="to 审批" to="审批" g="-47,-17"/>
+    </start>
+    <end name="end1" g="208,306,48,48"/>
+    <task name="审批" g="155,176,158,69" assignee="#{userID}">
+        <transition name="to end1" to="end1" g="-47,-17"/>
+    </task>
+</process>
