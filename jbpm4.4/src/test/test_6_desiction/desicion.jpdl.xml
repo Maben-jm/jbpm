@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="test" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="187,16,48,48" name="start1">
+      <transition g="-119,-17" name="to 审批【部门经理】" to="审批【部门经理】"/>
+   </start>
+   <end g="181,374,48,48" name="end1"/>
+   <task assignee="李四" g="131,96,161,65" name="审批【部门经理】">
+      <transition name="to exclusive1" to="exclusive1" g="-83,-17"/>
+   </task>
+   <task assignee="总经理" g="287,279,169,71" name="审批【总经理】">
+      <transition g="-47,-17" name="to end1" to="end1"/>
+   </task>
+   <decision name="exclusive1" g="187,207,48,48">
+   <handler class="cn.itcast.f_decision.DecisionHandlerImpl" />
+      <transition name="to end1" to="end1" g="-47,-17"/>
+      <transition name="to 审批【总经理】" to="审批【总经理】" g="-107,-17"/>
+   </decision>
+</process>

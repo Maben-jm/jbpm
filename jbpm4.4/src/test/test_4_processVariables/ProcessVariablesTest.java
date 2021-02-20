@@ -97,7 +97,6 @@ public class ProcessVariablesTest {
     }
 
     /**设置和获取流程变量的汇总*/
-    @Test
     public void setAndGetVariable() {
         String executionId = "state.20001";
         ExecutionService executionService = processEngine.getExecutionService();//与执行相关的Service
