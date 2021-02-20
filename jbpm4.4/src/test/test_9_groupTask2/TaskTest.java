@@ -1,4 +1,4 @@
-package test.test_10_groupTask2;
+package test.test_9_groupTask2;
 
 import java.net.URL;
 import java.util.HashMap;

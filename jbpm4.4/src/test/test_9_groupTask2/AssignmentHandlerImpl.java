@@ -1,4 +1,4 @@
-package test.test_10_groupTask2;
+package test.test_9_groupTask2;
 
 import org.jbpm.api.model.OpenExecution;
 import org.jbpm.api.task.Assignable;
