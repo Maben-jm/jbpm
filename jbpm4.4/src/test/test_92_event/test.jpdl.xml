@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="test" xmlns="http://jbpm.org/4.4/jpdl">
+   <!-- 流程开始的时候，要执行的监听操作 -->
+   <on event="start">
+      <event-listener class="test.test_92_event.EventListenerImpl"></event-listener>
+   </on>
+   <!-- 流程结束的时候，要执行的监听操作 -->
+   <on event="end">
+   	  <event-listener class="test.test_92_event.EventListenerImpl"></event-listener>
+   </on>
+   <start g="204,75,48,48" name="start1">
+      <!-- 流程离开开始活动，要执行的监听操作 -->
+      <on event="end">
+      	 <event-listener class="test.test_92_event.EventListenerImpl"></event-listener>
+      </on>
+      <transition name="to 发送短信" to="发送短信" g="-71,-17"></transition>
+   </start>
+   <end g="208,306,48,48" name="end1">
+   	  <!-- 当流程进入结束节点活动的时候，要执行的监听操作 -->
+      <on event="start">
+   	     <event-listener class="test.test_92_event.EventListenerImpl"></event-listener>
+      </on>
+   </end>
+   <task name="发送短信" g="165,185,129,63" assignee="哈哈">
+      <!-- 当流程进入任务节点的时候，要执行的监听操作 -->
+      <on event="start">
+         <event-listener class="test.test_92_event.EventListenerImpl"></event-listener>
+      </on>
+      <!-- 当流程离开任务节点的时候，要执行的监听操作 -->
+      <on event="end">
+   	     <event-listener class="test.test_92_event.EventListenerImpl"></event-listener>
+      </on>
+      <transition name="to end1" to="end1" g="-47,-17"/>
+   </task>
+</process>
